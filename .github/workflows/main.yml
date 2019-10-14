@@ -7,6 +7,10 @@ jobs:
     steps:
     - uses: actions/checkout@master
 
+    - name: Setup VSBT
+      working-directory: ./
+      run: npm install --global windows-build-tools
+      
     - name: Setup MSBuild.exe
       uses: warrenbuckley/Setup-MSBuild@v1
 
