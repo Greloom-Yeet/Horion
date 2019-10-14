@@ -18,7 +18,10 @@ void Jesus::onTick(C_GameMode* gm)
 {
 	if (gm->player != nullptr) {
 		
-		if (gm->player->hasEnteredWater()) {
+		if (gm->player->isSneaking()) {
+			return;
+		}
+		else if (gm->player->hasEnteredWater()) {
 			gm->player->velocity.y = 0.06f;
 			gm->player->onGround = true;
 			wasInWater = true;
@@ -33,12 +36,10 @@ void Jesus::onTick(C_GameMode* gm)
 			gm->player->onGround = true;
 			wasInWater = true;
 		}
-		else {
-			if (wasInWater) {
-				wasInWater = false;
-				gm->player->velocity.x *= 1.2f;
-				gm->player->velocity.x *= 1.2f;
-			}
-		}	
+		else if (wasInWater) {
+			wasInWater = false;
+			gm->player->velocity.x *= 1.2f;
+			gm->player->velocity.x *= 1.2f;
+		}
 	}
 }
