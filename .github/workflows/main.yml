@@ -12,4 +12,4 @@ jobs:
 
     - name: MSBuild
       working-directory: ./
-      run: msbuild MyProject.csproj
+      run: msbuild Horion.vcxproj
