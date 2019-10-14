@@ -4,7 +4,7 @@
 
 Tower::Tower() : IModule(0x0, BUILD)
 {
-	registerFloatSetting("motion", &this->motion, this->motion, 0.3f, 1);
+	registerFloatSetting("motion", &this->motion, this->motion, 0.3f, 1.f);
 }
 
 
