@@ -21,11 +21,22 @@ void TimeReversal::onTick(C_GameMode* gm) {
 		pos4 = pos3;
 		pos5 = pos4;
 		pos1 = g_Data.getLocalPlayer()->getPos();
+		counter = 0;
 	} else {
-		counter++;
+		counter += 1;
 	}
 }
 
 void TimeReversal::onDisable() {
-	if (delay = 
+	if (delay = 5) {
+		g_Data.getLocalPlayer()->setPos(pos5);
+	}else if (delay = 4) {
+		g_Data.getLocalPlayer()->setPos(pos4);
+	}else if (delay = 3) {
+		g_Data.getLocalPlayer()->setPos(pos3);
+	}else if (delay = 2) {
+		g_Data.getLocalPlayer()->setPos(pos2);
+	}else if (delay = 1) {
+		g_Data.getLocalPlayer()->setPos(pos1);
+	}
 }
