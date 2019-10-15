@@ -4,7 +4,7 @@ class Criticals :
 	public IModule
 {
 private:
-	float critChance = 100;
+	int critChance = 100;
 	
 public:
 	Criticals();
