@@ -14,6 +14,18 @@ const char* TimeReversal::getModuleName()
 	return ("TimeReversal");
 }
 
-void AutoTotem::onTick(C_GameMode* gm) {
+void TimeReversal::onTick(C_GameMode* gm) {
+	if (counter >= 20) {
+		pos2 = pos1;
+		pos3 = pos2;
+		pos4 = pos3;
+		pos5 = pos4;
+		pos1 = g_Data.getLocalPlayer()->getPos();
+	} else {
+		counter++;
+	}
+}
 
+void TimeReversal::onDisable() {
+	if (delay = 
 }
