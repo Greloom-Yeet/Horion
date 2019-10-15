@@ -648,7 +648,9 @@ void Hooks::sendToServer(C_LoopbackPacketSender* a, C_Packet* packet)
 		CriticalsMod = moduleMgr->getModule<Criticals>();
 	else if(CriticalsMod->isEnabled())
 	{
-		if (g_Data.getClientInstance()->getLocalPlayer() != nullptr) {
+		CriticalsMod = moduleMgr->getModule<Criticals>();
+		const int critChance = CriticalsMod->getCritChance();
+		if (g_Data.getClientInstance()->getLocalPlayer() != nullptr && (rand() % 100) <= (critChance - 1)) {
 			C_MovePlayerPacket movePacket = C_MovePlayerPacket();
 			if (movePacket.vTable == packet->vTable) {
 				C_MovePlayerPacket* p = reinterpret_cast<C_MovePlayerPacket*>(packet);
