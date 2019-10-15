@@ -20,8 +20,6 @@ bool GiveCommand::execute(std::vector<std::string>* args)
 	if (args->size() > 3)
 		itemData = static_cast<char>(assertInt(args->at(3)));
 
-	try
-	{
 		itemId = std::stoi(args->at(1));
 	}
 	catch (const std::invalid_argument&)
@@ -139,8 +137,4 @@ bool GiveCommand::execute(std::vector<std::string>* args)
 
 	clientMessageF("%sSuccessfully given item!", GREEN);
 	return true;
-	}catch (std::exception e){
-		clientMessageF("%sUh oh! Stinky ID!", RED);
-		return false;
-	}
 }
