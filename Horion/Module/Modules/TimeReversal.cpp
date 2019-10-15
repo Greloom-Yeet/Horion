@@ -39,4 +39,5 @@ void TimeReversal::onDisable() {
 	}else if (delay == 1) {
 		g_Data.getLocalPlayer()->setPos(pos1);
 	}
+	setEnabled(true);
 }
