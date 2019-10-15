@@ -58,6 +58,7 @@
 #include "Modules/Tower.h"
 #include "Modules/AutoGapple.h"
 #include "Modules/BugUp.h"
+#include "Modules/TimeReversal.h"
 #include "../../Utils/Json.hpp"
 
 using json = nlohmann::json;
