@@ -6,6 +6,7 @@ class TimeReversal : public IModule
 {
 private:
 	int delay = 1;
+	int counter = 0;
 public:
 	TimeReversal();
 	~TimeReversal();
