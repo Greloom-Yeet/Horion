@@ -28,15 +28,15 @@ void TimeReversal::onTick(C_GameMode* gm) {
 }
 
 void TimeReversal::onDisable() {
-	if (delay = 5) {
+	if (delay == 5) {
 		g_Data.getLocalPlayer()->setPos(pos5);
-	}else if (delay = 4) {
+	}else if (delay == 4) {
 		g_Data.getLocalPlayer()->setPos(pos4);
-	}else if (delay = 3) {
+	}else if (delay == 3) {
 		g_Data.getLocalPlayer()->setPos(pos3);
-	}else if (delay = 2) {
+	}else if (delay == 2) {
 		g_Data.getLocalPlayer()->setPos(pos2);
-	}else if (delay = 1) {
+	}else if (delay == 1) {
 		g_Data.getLocalPlayer()->setPos(pos1);
 	}
 }
